@@ -1,0 +1,147 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 25, 2019 at 02:59 PM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `project`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `name` varchar(100) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `country` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`name`, `phone`, `password`, `email`, `gender`, `country`) VALUES
+('kyaw gyi', '09787622893', '101', 'kyawgyi119@gmail.com', 'male', 'Myanmar'),
+('kyawzawwin', '09799654669', '111', 'kyawgyi119@gmail.com', 'male', 'Japan'),
+('ayechannyein', '09787622893', '111', 'ayechan119@gmail.com', 'male', 'Myanmar');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `items`
+--
+
+CREATE TABLE `items` (
+  `id` varchar(10) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `price` int(20) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `available` varchar(15) NOT NULL,
+  `image` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `items`
+--
+
+INSERT INTO `items` (`id`, `name`, `price`, `description`, `category`, `type`, `available`, `image`) VALUES
+('D001', 'Zero Two(02)Wig', 40000, 'aaa', 'Darling', 'costume', 'unavailable', 'Hufu.webp'),
+('D002', 'Zero Two Costume', 150000, 'Zero Two Darling in the  Franxx Nine Lota Cosplay Costume', 'Darling', 'costume', 'unavailable', 'zerotwo_costume.jpg'),
+('D003', 'Zero Two  Strelizia Coat', 150000, 'Zero two Darling in the Franxx :02  Coat Cosplay', 'Darling', 'costume', 'unavailable', 'zerotwo_suit.jpg'),
+('D004', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'unavailable', 'zerotwo_suitshoe.jpg'),
+('D005', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'unavailable', 'zerotwoshoe.jpg'),
+('D006', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'darlinginthefranxxsuit.jpg'),
+('D007', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'unavailable', 'kokorowig.jpg'),
+('D008', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'hiro_wig.jpg'),
+('D009', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'hirocostume.jpg'),
+('D010', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'ichigowig.jpg'),
+('D011', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'ichigocostume.jpg'),
+('D012', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'zerotwosuit.jpg'),
+('T001', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'LAjianyanli.webp'),
+('T002', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'LAjinling.webp'),
+('T003', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'LAlanzhan.webp'),
+('T004', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'LAlzshoe.webp'),
+('T005', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'lanxichen.webp'),
+('T006', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'LAwwxshoe.webp'),
+('T007', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'LAxueyang.webp'),
+('T008', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'lotus.webp'),
+('T009', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'Hufu.webp'),
+('K001', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'nezukoacc.jpg'),
+('K002', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'nezuko_wig.jpg'),
+('K003', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'muichirou_Costume.jpg'),
+('K004', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'kanao_costume.jpg'),
+('K005', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'shinazugawa_wig.jpg'),
+('K006', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'demonslayershoes.jpg'),
+('K007', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'sabito_mask.jpg'),
+('K008', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'rengoku_kyoujurou_wig.jpg'),
+('K009', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'kanao_shoe.jpg'),
+('K010', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'Zenitsu_wig.jpg'),
+('K011', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'kanao_wig.jpg'),
+('K012', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'headwear.jpg'),
+('K013', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'giyuu_wig.jpg'),
+('K014', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'nezuko_shoe.jpg'),
+('K015', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'hashira_costume.jpg'),
+('K016', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'inosuke_head.jpg'),
+('K017', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'mitsuri_costume.jpg'),
+('K023', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'tanjiro_costume.jpg'),
+('K018', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'Giyuu_shoe.jpg'),
+('K019', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'Mitsuri_wig.jpg'),
+('K020', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'mitsuri_shoe.jpg'),
+('K021', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'Inosuke_wig.jpg'),
+('K022', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'Inosuke_shoe.jpg'),
+('M001', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'wwxshoe.webp'),
+('M002', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'wwxsuibian.webp'),
+('M003', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'youngwwx.webp'),
+('M004', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'wenningwig.webp'),
+('M005', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'Stand.webp'),
+('N001', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'kushinawig.jpg'),
+('N002', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'kushinacostume.jpg'),
+('N003', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'kushinashoe.jpg'),
+('N004', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'narutohokagewig.jpg'),
+('K024', 'Zero Two(02)Wig', 40000, 'Daling in the Franxx :Zero two Cosplay Strelizia 02 Cosplay Pink ', 'Darling', 'wig', 'available', 'shinobucostume.jpg'),
+('N005', 'Naruto Costume', 80000, 'balh balh', 'Naruto', 'costume', 'unavailable', 'narutowig.jpeg'),
+('K025', 'Shino Bu Shoe', 40000, 'balh', 'Demon', 'shoe', 'available', 'shinobushoe.jpg'),
+('N006', 'Kakashi Wig', 35000, 'Naruto Cosplay :', 'Naruto', 'wig', 'available', 'kakashiwig.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `name` varchar(100) NOT NULL,
+  `phonenumber` varchar(20) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `country` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
